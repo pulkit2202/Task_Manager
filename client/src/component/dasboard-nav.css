@@ -1,0 +1,95 @@
+.dasboard-nav{
+    display: flex;
+    height:9vh;
+    width: 100%;
+    
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.dasboard-nav__account{
+    display: flex;
+}
+.dasboard-nav__time{
+    display: flex;
+  
+}
+.dasboard-nav__time p{
+    padding: 0px 15px;
+}
+.dasboard-nav__account{
+    align-items: center;
+    margin-right: 1.5%;  
+}
+.dasboard-nav__account-img{
+    padding-left: 9px;
+    position: relative;
+}
+.dasboard-nav__account-img img{
+    border: 2px solid black;
+    border-radius: 50%;
+    
+}
+.dasboard-nav__account-img:hover::before{
+    /* content: attr(data-tooltip); */
+    content: 'Profile';
+    position: absolute;
+    top: 10%;
+    right: 100%;
+    color: rgba(243, 252, 255 ,.9);
+    padding: 5px;
+    transition: all .5s ease-out;
+    border-radius: 25px;
+    background-color: rgba(2, 3, 3,.7 );
+}
+.arrow {
+    border: solid black;
+   
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+.dasboard-nav__text{
+    position: relative;
+    letter-spacing: 1px;
+    
+   margin-left: 3%;
+}
+.dasboard-nav__text::before{
+    content: '';
+    border: 3px solid black;
+    right: 103%;
+    top: 11%;
+    height: 27px;   
+    position: absolute;
+    
+}
+.burger{
+    margin-left: 2%;
+    display: none;
+    
+}
+.burger img{
+    width: 19px;
+}
+@media all and (max-width:800px){
+    .dasboard-nav__text{
+        display: none;
+    }
+    .burger{
+        display: block;
+       
+    }
+    .dasboard-nav__time{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .dasboard-nav__time{
+        display: none;
+    }
+}
